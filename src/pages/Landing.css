@@ -1,0 +1,322 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Home Page Container */
+.home-page {
+    padding: 0;
+    margin: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: url("https://media.istockphoto.com/id/1186431236/photo/lots-of-cars-in-an-open-parking-lot-selective-focus.jpg?s=612x612&w=0&k=20&c=Gz1MxM5LKzH7DVTTjMcCPMhimf3hOkW9T0W1TVv1xlA=") center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay Effect */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Hero Quote */
+.hero-quote {
+    font-size: 38px;
+    font-weight: 700;
+    text-align: left;
+    max-width: 50%;
+    padding: 15px 20px;
+    font-family: "Playfair Display", serif;
+    background: linear-gradient(90deg, #614bf3, #fc913a, #f9d423);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 15px rgba(255, 204, 92, 0.8);
+    letter-spacing: 1.5px;
+    animation: fadeInBounce 1.5s ease-in-out;
+    position: relative;
+}
+
+/* Text Decoration */
+.hero-quote::before {
+    content: "“";
+    font-size: 70px;
+    position: absolute;
+    left: -40px;
+    top: -20px;
+    color: rgba(255, 204, 92, 0.9);
+}
+
+.hero-quote::after {
+    content: "”";
+    font-size: 70px;
+    position: absolute;
+    right: -40px;
+    bottom: -20px;
+    color: rgba(255, 204, 92, 0.9);
+}
+
+/* Animation */
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-quote {
+        font-size: 32px;
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-overlay {
+        justify-content: center;
+        padding-left: 0;
+    }
+    
+    .hero-quote {
+        text-align: center;
+        font-size: 28px;
+        max-width: 80%;
+    }
+    
+    .hero-quote::before, 
+    .hero-quote::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-quote {
+        font-size: 24px;
+        max-width: 90%;
+    }
+}
+.car-imagehome {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+/* Latest Cars */
+.latest-cars {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.car-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Our Values Section */
+.our-values {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.values-description {
+    font-size: 16px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.value-card .icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.value-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Contact & Footer */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact {
+    margin-bottom: 20px;
+}
+
+.contact h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact-text {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .car-listings {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+    }
+}
+/* Our Journey Section */
+.our-journey {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    background: #fff;
+}
+
+.journey-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.journey-content h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.journey-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.journey-stats {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-box {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box h3 {
+    font-size: 24px;
+    color: #ff5722;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+.journey-image {
+    flex: 1;
+    text-align: right;
+}
+
+.journey-image img {
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .our-journey {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .journey-content, .journey-image {
+        max-width: 100%;
+    }
+
+    .journey-stats {
+        justify-content: center;
+    }
+
+    .journey-image img {
+        margin-top: 20px;
+        width: 80%;
+    }
+}

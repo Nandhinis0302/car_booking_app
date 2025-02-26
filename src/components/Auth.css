@@ -1,0 +1,275 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../assets/bg.jpg") no-repeat center center/cover;
+  }
+  
+  .auth-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .auth-box h2 {
+    color: #d93025;
+    margin-bottom: 20px;
+  }
+  
+  .auth-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .auth-box button {
+    width: 95%;
+    padding: 10px;
+    background: #d93025;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-box button:hover {
+    background: #b0281a;
+  }
+  
+  .google-btn {
+    background: #4285F4;
+    margin-top: 10px;
+  }
+  
+  .google-btn:hover {
+    background: #357ae8;
+  }
+  /* Auth Section */
+  .auth-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Welcome Text */
+  .welcome-text {
+    color: white;
+    font-size: 16px;
+  }
+  
+  /* Buttons */
+  button,
+  .login-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  button:hover,
+  .login-btn:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-links {
+      margin-top: 10px;
+      flex-direction: column; /* Stack links vertically on mobile */
+    }
+  
+    .nav-links a {
+      display: block;
+      margin: 5px 0;
+    }
+  
+    .auth-section {
+      margin-top: 10px;
+    }
+  
+    .login-btn {
+      display: inline-block;
+    }
+  }
+  
+  
+  /* navbar css */
+  /* Navbar Container */
+/* .navbar {
+  background-color: #1e1e1e;
+  padding: 15px 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ff4d4d;
+}
+.nav-links {
+  display: flex; 
+  gap: 20px;     
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4d4d;
+} */
+
+/* Navbar Container */
+/* Navbar Container - Make it Sticky */
+.navbar {
+  background-color: #1e1e1e;
+  padding: 15px 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;   /* This makes the navbar stay at the top */
+  top: 0;             /* Position it at the very top of the page */
+  width: 100%;        /* Full width */
+  z-index: 1000;      /* Ensure it stays above other elements */
+}
+
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ff4d4d;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4d4d;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.search-bar input::placeholder {
+  color: #999;
+}
+
+/* Adjust Navbar Layout */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Login/Logout Button */
+.login-btn, .logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-btn:hover, .logout-btn:hover {
+  background-color: #e60000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .search-bar input {
+      width: 100%;
+  }
+}
