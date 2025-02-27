@@ -62,7 +62,7 @@ const Navbar = ({ onSearch }) => {
 
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/carview">Cars</Link>
+          <Link to="/carpage">Cars</Link>
           {isAdmin && <Link to="/admin">Admin</Link>}
         </div>
 
