@@ -32,7 +32,7 @@ const Login = () => {
       const role = await getUserRole(user.uid);
       alert("Login Successful!");
 
-      navigate(role === "admin" ? "/admin" : "/carlist"); // Redirect based on role
+      navigate(role === "admin" ? "/admin" : "/"); // Redirect based on role
     } catch (error) {
       console.error("Login Failed:", error);
       alert(error.message);
@@ -51,7 +51,7 @@ const Login = () => {
       const role = await getUserRole(user.uid);
       alert("Google Login Successful!");
 
-      navigate(role === "admin" ? "/admin" : "/carlist");
+      navigate(role === "admin" ? "/admin" : "/");
     } catch (error) {
       console.error("Google Sign-In Failed:", error);
       alert(error.message);

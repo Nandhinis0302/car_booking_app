@@ -37,7 +37,6 @@ const CarPage = () => {
             <div key={car.id} className="car-card">
               <img src={car.imageUrl} alt={car.name} className="car-image" />
               <h3 className="car-title">{car.name}</h3>
-              <p className="car-brand">Brand: {car.brand}</p>
               <p className="car-price">Price: ${car.price}</p>
               <Link to={`/car/${car.id}`} className="car-link">View Details</Link>
             </div>

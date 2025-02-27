@@ -4,6 +4,7 @@ import { fetchCars } from "../redux/carSlice";
 import { Link } from "react-router-dom";
 import "./Landing.css";
 
+
 const HomePage = () => {
   const dispatch = useDispatch();
   const { cars, status, error } = useSelector((state) => state.cars);
@@ -33,8 +34,7 @@ const HomePage = () => {
             <div key={car.id} className="car-card">
               <img src={car.imageUrl} alt={car.name} className="car-imagehome" />
               <h3 className="car-title">{car.name}</h3>
-              <p className="car-brand">Brand: {car.brand}</p>
-              <p className="car-price">Price: ${car.price}</p>
+              <p className="car-price">Price : {car.price}</p>
               <Link to={`/car/${car.id}`} className="car-link">View Details</Link>
             </div>
           ))}
@@ -46,8 +46,9 @@ const HomePage = () => {
         <div className="journey-content">
           <h2>Our Journey</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur
-            tincidunt tortor libero ac dictum. Nulla vitae interdum sapien nisl nec.
+          Drive Your Dreams, Buy Your Next Car with Confidence!
+Explore top-quality second-hand cars at the best prices with secure bookings.
+Seamless buying experience with trusted sellers and verified listings.
           </p>
           <div className="journey-stats">
             <div className="stat-box">
@@ -103,7 +104,7 @@ const HomePage = () => {
       <footer className="footer">
         <div className="contact">
           <h2>Contact Us</h2>
-          <p className="contact-text">📧 Email: support@carshop.com</p>
+          <p className="contact-text">📧 Email: support@carspot.com</p>
           <p className="contact-text">📞 Phone: +123 456 7890</p>
         </div>
         <div className="footer-bottom">
